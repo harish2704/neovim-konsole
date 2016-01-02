@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+appRoot=$(dirname $(readlink -f $0) );
+
+# Disable Ctrl-S
+stty stop '' -ixoff
+
+# env VIMRUNTIME="$appRoot/runtime" "$appRoot/bin/nvim" $@
+env /usr/bin/nvim $@

@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+thisFile=$(readlink -f $0);
+appDir="$(dirname $thisFile)/..";
+
+export COLORTERM=xterm-256color TERM=xterm-256color
+export INPUTRC="${appDir}/inputrc_nvim"
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+# konsole --hide-tabbar --hide-menubar --profile nvim -e nvim $@
+# konsole --profile nvim

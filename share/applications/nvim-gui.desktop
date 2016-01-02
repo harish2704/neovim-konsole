@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Neovim Gui
+Exec=nvim-gui
+MimeType=application/javascript;application/python;text/css;
+Icon=neovim-mark
+Terminal=false
+Type=Application

@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Neovim Konsole
+Exec=nvim-konsole
+Icon=neovim-mark
+MimeType=application/javascript;application/python;text/css;
