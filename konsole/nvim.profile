@@ -9,9 +9,12 @@ CustomCursorColor=0,255,0
 UseCustomCursorColor=true
 
 [General]
-Environment=
+Environment=\\0
+Icon=neovim-mark
+LocalTabTitleFormat=%d :Neovim
 Name=nvim
 Parent=FALLBACK/
+RemoteTabTitleFormat=(%d): Neovim
 StartInCurrentSessionDir=false
 
 [Keyboard]
