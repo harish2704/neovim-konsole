@@ -17,3 +17,11 @@ True color support for nvim is enabled by default.
 
 Also, Desktop configuration files and resized icons are also included
 
+## Installation
+
+### Install with [installer-scripts](https://github.com/harish2704/installer-scripts)
+`installer-scripts.sh install https://github.com/harish2704/neovim-konsole`
+
+### Install manually
+* cd Application_dir;
+* `./install.sh`
