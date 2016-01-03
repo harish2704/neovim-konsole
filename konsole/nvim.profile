@@ -9,7 +9,7 @@ CustomCursorColor=0,255,0
 UseCustomCursorColor=true
 
 [General]
-Environment=\\0
+Environment=TERM=xterm-256color,NVIM_TUI_ENABLE_TRUE_COLOR=1,NVIM_TUI_ENABLE_CURSOR_SHAPE=1,
 Icon=neovim-mark
 LocalTabTitleFormat=%d :Neovim
 Name=nvim
