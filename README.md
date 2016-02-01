@@ -43,3 +43,6 @@ Then we can troble shoot it by the following techniq.
   * Now, you can see the corresponding terminal keycode for your shortcut.
   * Now, Edit your Konsole keytab file ( @ $HOME/.kde/share/apps/konsole ) and add an appropriate entry.
 
+
+### Screen shot
+![Screen shot](http://i.giphy.com/l2JInHtGIhatbiuRO.gif "Neovim+Konsole on ubuntu 14.04")
