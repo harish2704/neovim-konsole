@@ -6,13 +6,14 @@ appDir="$(dirname $thisFile)/..";
 # Disable Ctrl-S
 stty stop '' -ixoff
 
-export TERM=xterm-256color
+# Env varibles are not used becaues, they are embeded in konsole profile
+# export TERM=Konsole-256color
 export INPUTRC="${appDir}/inputrc_nvim"
-export NVIM_TUI_ENABLE_TRUE_COLOR=1
-export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+# export NVIM_TUI_ENABLE_TRUE_COLOR=1
+# export NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 # For CursorShape management in Konsole
 cursorShapeCmd='let &t_SI = "\<Esc>]50;CursorShape=1\x7" | let &t_SR = "\<Esc>]50;CursorShape=2\x7" | let &t_EI = "\<Esc>]50;CursorShape=0\x7"';
 
-konsole --dograb --hide-tabbar --hide-menubar --profile nvim -e /usr/bin/nvim --cmd "$cursorShapeCmd" $@;
+konsole --nofork --dograb --hide-tabbar --hide-menubar --profile nvim -e /usr/bin/nvim --cmd "$cursorShapeCmd" $@;
 # konsole --profile nvim
