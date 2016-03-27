@@ -9,17 +9,18 @@ CustomCursorColor=0,255,0
 UseCustomCursorColor=true
 
 [General]
-Environment=TERM=xterm-256color,NVIM_TUI_ENABLE_TRUE_COLOR=1,NVIM_TUI_ENABLE_CURSOR_SHAPE=1,
+Environment=TERM=konsole-256color,NVIM_TUI_ENABLE_TRUE_COLOR=1,NVIM_TUI_ENABLE_CURSOR_SHAPE=1,
 Icon=neovim-mark
-LocalTabTitleFormat=%d :Neovim
+LocalTabTitleFormat=%w
 Name=nvim
 Parent=FALLBACK/
-RemoteTabTitleFormat=(%d): Neovim
+RemoteTabTitleFormat=( %w )
 StartInCurrentSessionDir=false
 
 [Keyboard]
 KeyBindings=nvim-KeyBindings
 
 [Terminal Features]
+BidiRenderingEnabled=false
 BlinkingCursorEnabled=false
 FlowControlEnabled=false
