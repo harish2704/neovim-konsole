@@ -29,12 +29,10 @@ Also, Desktop configuration files and resized icons are also included
 * `./install.sh`
 
 
-### TODO
-* Should exit vim while closing application windoe
 
 ### Mapping keycodes
 Suppose a key binding ( Eg: \<C-CR\>  ) is not able map in console vim.
-Then we can troble shoot it by the following techniq.
+Then we can fix this in the following way
 
   * Open any Neovim client which supports that key binding ( Eg: here, I opened Neovim python-client for GTK )
   * enter `:terminal`
