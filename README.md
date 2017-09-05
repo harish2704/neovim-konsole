@@ -13,11 +13,32 @@ etc..
 
 Then main reason to choose Konsole terminal emulator is its true-color support and its configurable keybinding mechanism
 
-True color support for nvim is enabled by default.
+This repo also contains desktop configuration files and resized icons required for linux desktop environments
 
-Cursor shape will change according to the mode.
+## About true color support and cursor shape.
 
-Also, Desktop configuration files and resized icons are also included
+### True color support 
+
+Before [ this ]( https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 ) breaking change,
+Truecolor support was working by setting `NVIM_TUI_ENABLE_TRUE_COLOR` environment variable.
+
+Now , it changed to `set termguicolors` vim command.
+
+### Cursor shape
+
+Before [ this ]( https://github.com/neovim/neovim/wiki/Following-HEAD#20160210 ) breaking change,
+Cursor shape change was working by 
+* Setting `NVIM_TUI_ENABLE_CURSOR_SHAPE` environment variable and,
+* executing vim command `let &t_SI = "\<Esc>]50;CursorShape=1\x7" | let &t_SR = "\<Esc>]50;CursorShape=2\x7" | let &t_EI = "\<Esc>]50;CursorShape=0\x7"` inside vim.
+
+Now, it is changed to following vim command
+* `set guicursor=n-c:block,i-ci-ve:ver40,r-cr-v:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175`
+
+Neovim uses some environment variables such as `VTE_VERSTION` to detect vte based terminal such as gnome-termnal, `KONSOLE_*` environment variables to detect konsole terminal
+
+Since konsole is not compatible with [ DECSCUSR ]( http://vt100.net/docs/vt510-rm/DECSCUSR ) sequences, nvim talks to konsole in a different way.
+
+if we are running nvim-konsole from gnome-termnal , `unset VTE_VERSTION` is required for proper working of cursor shape. It is done by default by `nvim-konsole` script
 
 ## Installation
 
@@ -44,3 +65,8 @@ Then we can fix this in the following way
 
 ### Screen shot
 ![Screen shot](http://i.giphy.com/l2JInHtGIhatbiuRO.gif "Neovim+Konsole on ubuntu 14.04")
+
+
+### Related links
+* My Neovim config files ( https://github.com/harish2704/dotFiles/blob/master/home/.config/nvim/init.vim )
+* A fully configurable file manager called [ SpaceFM ]( http://ignorantguru.github.io/spacefm/ ). Those who like Vim will also like this
