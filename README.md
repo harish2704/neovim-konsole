@@ -1,3 +1,8 @@
+## deprecation notice
+I no longer use use Neovim+Konsole so, I do not maintain this repo anymore.
+Just use [Alacritty](https://github.com/alacritty/alacritty) with necessary configurations . For eg: see [my dot files]( https://github.com/harish2704/dotFiles/blob/master/home/.config/alacritty/alacritty.yml#L503 )
+
+
 # neovim-konsole
 
 This is a wrapper script and configurations files for running nvim as gui text editor in my Ubunutu desktop.
